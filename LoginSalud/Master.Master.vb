@@ -1,6 +1,8 @@
 ﻿Public Class Master
     Inherits System.Web.UI.MasterPage
 
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Label1.Text = Session("usuario")
         If Session("tusuario") = 2 Then
@@ -15,4 +17,8 @@
         End If
     End Sub
 
+    Protected Sub Logout(sender As Object, e As EventArgs)
+        Session.Clear()
+        Response.Redirect("Default.aspx")
+    End Sub
 End Class

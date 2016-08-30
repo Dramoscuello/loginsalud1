@@ -262,6 +262,7 @@
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="IMG\logout.png" />
     <Content Include="Views\Prueba.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

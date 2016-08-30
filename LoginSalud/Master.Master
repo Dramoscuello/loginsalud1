@@ -37,7 +37,7 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu">
 
-                        <a href="#">
+                        <a href="#" runat="server" onserverclick="Logout">
                             <img src="IMG/salir.png" class="user-image" alt="User Image">
                             <span class="hidden-xs">Salir</span>
                         </a>
