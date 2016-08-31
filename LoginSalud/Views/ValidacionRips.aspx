@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Master.Master" CodeBehind="ValidacionRips.aspx.vb" Inherits="LoginSalud.ValidacionRips" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Cbody" runat="server">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
     <link href="../Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="../Content/bootstrap/css/fileinput.min.css" rel="stylesheet" />
+
     <link href="../Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap/css/fileinput.css" rel="stylesheet" />
-    <link href="../Content/StyleSheet1.css" rel="stylesheet" />
-    <script src="../Content/fileinput.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <p>
+    <link href="../Content/bootstrap/css/StyleSheet1.css" rel="stylesheet" />
+    <script src="../Content/bootstrap/js/fileinput.min.js"></script>
+        <p>
         &nbsp;
     </p>
     <div class="Contenido">

@@ -161,65 +161,65 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member>
 <member name="F:LoginSalud.Master._Label1">
 <summary>
-Label1 control.
+Control Label1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:LoginSalud.Master._hide1">
 <summary>
-hide1 control.
+Control hide1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:LoginSalud.Master._hide2">
 <summary>
-hide2 control.
+Control hide2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:LoginSalud.Master._hide3">
 <summary>
-hide3 control.
+Control hide3.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:LoginSalud.Master._form1">
 <summary>
-form1 control.
+Control form1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:LoginSalud.Master._Cbody">
 <summary>
-Cbody control.
+Control Cbody.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:LoginSalud.Master._Cfoot">
 <summary>
-Cfoot control.
+Control Cfoot.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="T:LoginSalud.My.MyWebExtension">
