@@ -19,6 +19,6 @@
 
     Protected Sub Logout(sender As Object, e As EventArgs)
         Session.Clear()
-        Response.Redirect("Default.aspx")
+        Response.Redirect("Ingreso")
     End Sub
 End Class
