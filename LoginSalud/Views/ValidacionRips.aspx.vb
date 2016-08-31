@@ -12,7 +12,7 @@ Public Class ValidacionRips
     Dim Nomre_Archivo As New DataTable
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        Label3.Visible = False
     End Sub
 
     Private Sub cargar_Solo_Nombres(ByRef id As String, ByRef Archi2 As String, ByRef nombre As String)
@@ -26,74 +26,89 @@ Public Class ValidacionRips
                     Dim US_ As String() = Directory.GetFiles(Archi2, "US*")
                     If US_.Length = 0 Then
                         MsgBox("El archivo US no Existe-- " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de usuarios"
                     claseprocedure.RCargar_Control(Replace(US_(0), "\", "/"), "US", id)
                 Case "AC"
                     Dim AC As String() = Directory.GetFiles(Archi2, "AC*")
                     If AC.Length = 0 Then
                         MsgBox("El archivo AC no Existe-- " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de Consultas"
                     claseprocedure.RCargar_Control(Replace(AC(0), "\", "/"), "AC", id)
+
                 Case "AF"
                     Dim AF As String() = Directory.GetFiles(Archi2, "AF*")
                     If AF.Length = 0 Then
                         MsgBox("El archivo AF no Existe  - " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de transacciones"
                     claseprocedure.RCargar_Control(Replace(AF(0), "\", "/"), "AF", id)
+
                 Case "AH"
                     Dim AH As String() = Directory.GetFiles(Archi2, "AH*")
                     If AH.Length = 0 Then
                         MsgBox("El archivo AH no Existe  - " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de Hospitalizacion"
                     claseprocedure.RCargar_Control(Replace(AH(0), "\", "/"), "AH", id)
+
                 Case "AM"
                     Dim AM As String() = Directory.GetFiles(Archi2, "AM*")
                     If AM.Length = 0 Then
                         MsgBox("El archivo AM no Existe - " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de Medicamentos"
                     claseprocedure.RCargar_Control(Replace(AM(0), "\", "/"), "AM", id)
                 Case "AN"
                     Dim AN As String() = Directory.GetFiles(Archi2, "AN*")
                     If AN.Length = 0 Then
                         MsgBox("El archivo AN no Existe - " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de Nacimiento"
                     claseprocedure.RCargar_Control(Replace(AN(0), "\", "/"), "AN", id)
+
                 Case "AP"
                     Dim AP As String() = Directory.GetFiles(Archi2, "AP*")
                     If AP.Length = 0 Then
                         MsgBox("El archivo AP no Existe - " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de Procedimientos"
                     claseprocedure.RCargar_Control(Replace(AP(0), "\", "/"), "AP", id)
+
                 Case "AT"
                     Dim AT As String() = Directory.GetFiles(Archi2, "AT*")
                     If AT.Length = 0 Then
                         MsgBox("El archivo AT no Existe - " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de Otros Servicios"
                     claseprocedure.RCargar_Control(Replace(AT(0), "\", "/"), "at01", id)
                 Case "AU"
                     Dim AU As String() = Directory.GetFiles(Archi2, "AT*")
                     If AU.Length = 0 Then
                         MsgBox("El archivo AT no Existe - " & opcion, MsgBoxStyle.Information, "Simetria Consolidated")
-
+                        Label2.Text = ""
                         Exit Sub
                     End If
+                    Label2.Text = "Importando Archivos de Urgencias"
                     claseprocedure.RCargar_Control(Replace(AU(0), "\", "/"), "AU", id)
+
             End Select
         Next
         claseprocedure.Excluir()
@@ -126,7 +141,7 @@ Public Class ValidacionRips
                     claseprocedure.Validar_Usuarios()
             End Select
         Next
-        ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Validacion terminada');", True)
+        Label3.Visible = True
     End Sub
     Private Sub Llenar_Grid()
         'Dim dt As New DataTable()
@@ -221,9 +236,6 @@ Public Class ValidacionRips
 
     Protected Sub ButtonValidar_(sender As Object, e As EventArgs) Handles ButtonValidar.Click
         Dim conect As New ClassConexion
-
-
-
         Try
             If DropDownListPorcentaje.Text = "0" Then
                 ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Debe seleccionar el porcentaje de validacion ');", True)
@@ -245,14 +257,17 @@ Public Class ValidacionRips
                 For i As Integer = 0 To ImageFiles.Count - 1
                     Dim file As HttpPostedFile = ImageFiles(i)
                     file.SaveAs(Server.MapPath("Validacion/") & file.FileName)
+                    Label2.Text = "Cargando Archivos al Servidor"
                     Dim nomb As String = Mid(file.FileName, 1, 2)
                     If nomb = "CT" Or nomb = "Ct" Or nomb = "cT" Or nomb = "ct" Then
                         claseprocedure.RCargar_Control(source + file.FileName, UCase(nomb), "02")
+                        Label2.Text = "Importando Archivos CT"
                     End If
                 Next
                 Dim ct As String() = Directory.GetFiles(source, "CT*")
                 If ct.Length = 0 Then
                     ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Error el archivo CT no Existe  Verifique e intente nuevamente');", True)
+                    Label2.Text = ""
                     Exit Sub
                 Else
                     cargar_Solo_Nombres("02", source, "")

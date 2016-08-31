@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Master.Master" CodeBehind="ValidacionRips.aspx.vb" Inherits="LoginSalud.ValidacionRips" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Cbody" runat="server">
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="../Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="../Content/bootstrap/css/fileinput.min.css" rel="stylesheet" />
-
     <link href="../Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap/css/fileinput.css" rel="stylesheet" />
-    <link href="../Content/bootstrap/css/StyleSheet1.css" rel="stylesheet" />
-    <script src="../Content/bootstrap/js/fileinput.min.js"></script>
-        <p>
+    <link href="../Content/StyleSheet1.css" rel="stylesheet" />
+    <script src="../Content/fileinput.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <p>
         &nbsp;
     </p>
     <div class="Contenido">
@@ -35,7 +35,25 @@
         </div>
         <asp:Button ID="ButtonValidar" runat="server" Text="Validar" ToolTip="Iniciar validacion" CssClass="btn btn-success" />
         <asp:Button ID="ButtonInforme" runat="server" Text="Descagar informe" CssClass="btn btn-success" />
+    <br />
+        <br />
+        <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+           <br />
+
+        <br />
+      
+          <asp:Label ID="Label3" runat="server">
+
+                <div class="alert alert-dismissible alert alert-info mtop">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Validacion Terminada</strong>
+                </div>
+            </asp:Label>
     </div>
+
+    <br />
+  
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Cfoot" runat="server">
 </asp:Content>
