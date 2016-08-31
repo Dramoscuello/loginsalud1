@@ -4,8 +4,9 @@
 
 
 <asp:Content ID="cb" ContentPlaceHolderID="Cbody" runat="server">
-        <link href="Content/form.css" rel="stylesheet" />
+      
     <link rel="shortcut icon" type="image/x-icon" href="img/icon.ico" />
+    <link href="Content/bootstrap/css/form.css" rel="stylesheet" />
    <div class="card card-container">
   
         <h4 class="panel-title cta-text cta-panel" style="box-sizing: border-box; font-family:Neuropolitical;font-size: 18.8px;  font-weight: normal; line-height: normal; color: rgb(0, 96, 172); margin-top: 10px;">
