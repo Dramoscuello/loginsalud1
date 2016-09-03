@@ -17,6 +17,7 @@ Public Class _Default
         If Conectar_.State = ConnectionState.Closed Then
             Conectar_.Open()
             'Este comentario es solo una prueba
+            'Este es otra prueba
         End If
         Try
             Using cmd As New MySqlCommand("PA_consulta", Conectar_)
